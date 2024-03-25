@@ -20,6 +20,27 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_25_233815) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.integer "category_id"
+    t.string "title"
+    t.string "description"
+    t.decimal "goal_amount", precision: 9, scale: 2
+    t.string "start_date"
+    t.string "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rewards", force: :cascade do |t|
+    t.integer "project_id"
+    t.text "description"
+    t.decimal "amount", precision: 9, scale: 2
+    t.decimal "limit", precision: 9, scale: 2
+    t.date "delivery_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
