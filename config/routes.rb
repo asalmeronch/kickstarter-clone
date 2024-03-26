@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
   get "/projects" => "projects#index"
   get "/projects/:id" => "projects#show"
+  get "/rewards" => "rewards#index"
+  get "/rewards/:id" => "rewards#show"
 end
