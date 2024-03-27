@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get "/projects/:id" => "projects#show"
   get "/rewards" => "rewards#index"
   get "/rewards/:id" => "rewards#show"
+  post "comments" => "comments#create"
 end
